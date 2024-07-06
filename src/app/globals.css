@@ -13,3 +13,39 @@
     @apply w-[100%]
   }
 }
+
+
+@keyframes infinite{
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform:translateX(-100%)
+  }
+}
+
+.infinite-animition{
+  animation: infinite 20s linear infinite;
+}
+
+
+
+
+
+@keyframes infinite {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform:translateX(-100%);
+  }
+
+}
+
+.infinite-animition-two{
+  animation: infinite 20s linear infinite;
+  white-space: nowrap;
+}
+.paused{
+  animation-play-state: paused;
+}

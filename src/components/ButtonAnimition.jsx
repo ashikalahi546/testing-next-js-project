@@ -1,10 +1,11 @@
+import React from 'react';
 
 const ButtonAnimition = () => {
-    return (
-        <div className="h-screen">
-            
-        </div>
-    );
+  return (
+    <div>
+      
+    </div>
+  );
 };
 
 export default ButtonAnimition;
