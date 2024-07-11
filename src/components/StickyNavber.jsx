@@ -1,6 +1,8 @@
 "use client"
+import Cloud from "/public/images/13.webp"
 import { useEffect, useState } from "react";
 import { navberData } from "./allData/NavberData";
+import Image from "next/image";
 const StickyNavber = () => {
   const [header,setHeader] = useState(false);
   const scrollHeader = ()=>{
@@ -24,6 +26,10 @@ const StickyNavber = () => {
           </li>
         ))}
       </ul>
+
+      <div className="flex justify-center py-20 image-opacity">
+        <Image src={Cloud} alt="loading....?"/>
+      </div>
     </div>
   );
 };

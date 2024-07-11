@@ -6,6 +6,8 @@ import StickyNavber from "@/components/StickyNavber";
 import NavberTwo from "@/components/NavberTwo";
 import Image from "next/image";
 import LoadingSpinner from "@/components/LoadingSpinner";
+import BackgroundColorOpacity from "@/components/BackgroundColorOpacity";
+import ImageAnimationOpacity from "@/components/ImageAnimationOpacity";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
   {/* <InfiniteTextStop/> */}
   {/* <ImageAnimation/> */}
   {/* <LoadingSpinner/> */}
+  {/* <BackgroundColorOpacity/> */}
+  {/* <ImageAnimationOpacity/> */}
 </main>
   );
 }

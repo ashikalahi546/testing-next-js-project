@@ -145,3 +145,18 @@ animation: loading 0.75s  linear infinite  ;
     transform: rotate(360deg);
   }
 }
+
+.image-opacity{
+  animation: imageOpacity 3s ease-out infinite;
+}
+@keyframes imageOpacity{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0.5;
+  }
+  100%{
+    opacity: 1;
+  }
+}
