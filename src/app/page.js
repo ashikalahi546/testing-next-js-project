@@ -8,6 +8,9 @@ import Image from "next/image";
 import LoadingSpinner from "@/components/LoadingSpinner";
 import BackgroundColorOpacity from "@/components/BackgroundColorOpacity";
 import ImageAnimationOpacity from "@/components/ImageAnimationOpacity";
+import Loading from "@/components/Loading";
+import DataFetchLoading from "@/components/DataFetchLoading";
+import DataFetchingTwo from "@/components/DataFetchingTwo";
 
 export default function Home() {
   return (
@@ -21,6 +24,9 @@ export default function Home() {
   {/* <LoadingSpinner/> */}
   {/* <BackgroundColorOpacity/> */}
   {/* <ImageAnimationOpacity/> */}
+  {/* <Loading/> */}
+  {/* <DataFetchLoading/> */}
+  <DataFetchingTwo/>
 </main>
   );
 }

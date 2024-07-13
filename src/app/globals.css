@@ -160,3 +160,68 @@ animation: loading 0.75s  linear infinite  ;
     opacity: 1;
   }
 }
+/* swiper pagination start */
+/* 
+.swiper-pagination-bullet{
+  position: relative;
+  height: 14px !important;
+  width: 14px !important;
+  z-index : 0;
+  opacity: 100% !important;
+}
+.swiper-pagination-bullet::after{
+  content: "";
+  background-image: url('/Images/Swiper/Swiper2.png') !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-size: cover;
+  z-index: 9999;
+  opacity: 100%;
+
+}
+
+.swiper-pagination-bullet-active{
+  background: none !important;
+}
+.swiper-pagination-bullet-active::after{
+  content: "";
+  background-image: url('/Images/Swiper/Swiper.png') !important;
+  width: 100% !important;
+  height: 100% !important;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-size: cover;
+} */
+/* swiper pagination end */
+
+
+
+.loading {
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+.loading::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  border:  1px  solid white;
+  border-top-color:blue ;
+  animation: loader 0.80s linear infinite;
+  display: block;}
+
+@keyframes loader {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
