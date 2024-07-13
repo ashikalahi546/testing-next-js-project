@@ -24,7 +24,7 @@ const DataFetchingTwo = () => {
 
 
   const handleLoader =async ()=>{
-setLoading(true)
+setButtonLoading(true)
 try{
 const res = await fetch('https://jsonplaceholder.typicode.com/comments')
 const result = await res.json()
