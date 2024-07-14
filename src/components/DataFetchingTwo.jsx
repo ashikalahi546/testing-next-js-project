@@ -4,10 +4,11 @@ import React, { useEffect, useState } from "react";
 const DataFetchingTwo = () => {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [buttonLoading, setButtonLoading] = useState(false);
   const [itemToShow,setItemToShow] = useState(10)
   useEffect(() => {
     const fetchData = async () => {
-        setLoading(true)
+      setLoading(true)
       try {
         const res = await fetch(
           "https://jsonplaceholder.typicode.com/comments"
@@ -22,15 +23,17 @@ const DataFetchingTwo = () => {
   }, [itemToShow]);
 
 
-  const handleLoader =async ()=>{
-setLoading(true)
+  const handleLoader = async ()=>{
+    setButtonLoading(true)
+  
 try{
 const res = await fetch('https://jsonplaceholder.typicode.com/comments')
 const result = await res.json()
 setData(preData => [...preData, ...result.slice(itemToShow,itemToShow + 10)])
+// data update 
 setItemToShow(preItems => preItems + 10)
 }finally{
-    setLoading(false)
+  setButtonLoading(false)
 }
 
   }
@@ -56,10 +59,11 @@ setItemToShow(preItems => preItems + 10)
       
 
       <div className="w-40 mx-auto">
-        <button onClick={()=>handleLoader()} className="bg-orange-500 px-5 py-2.5 rounded mb-10 text-white">{loading ? <div className="loading"></div> : "See More" }</button>
+        <button onClick={()=> handleLoader()} className="bg-orange-500 px-5 py-2.5 rounded mb-10 text-white">{buttonLoading ? <div className="loading"></div> : "See More" }</button>
       </div>
     </div>
   );
 };
 
 export default DataFetchingTwo;
+

@@ -11,6 +11,7 @@ import ImageAnimationOpacity from "@/components/ImageAnimationOpacity";
 import Loading from "@/components/Loading";
 import DataFetchLoading from "@/components/DataFetchLoading";
 import DataFetchingTwo from "@/components/DataFetchingTwo";
+import ScrollToTop from "@/components/ScrollToTop";
 
 export default function Home() {
   return (
@@ -26,7 +27,8 @@ export default function Home() {
   {/* <ImageAnimationOpacity/> */}
   {/* <Loading/> */}
   {/* <DataFetchLoading/> */}
-  <DataFetchingTwo/>
+  {/* <DataFetchingTwo/> */}
+  {/* <ScrollToTop/> */}
 </main>
   );
 }

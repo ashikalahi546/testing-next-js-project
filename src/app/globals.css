@@ -225,3 +225,11 @@ animation: loading 0.75s  linear infinite  ;
   }
 }
 
+
+
+
+.progress-wrap {
+
+  transform: translateY(15px); 
+  transition: all .2s linear; 
+}
