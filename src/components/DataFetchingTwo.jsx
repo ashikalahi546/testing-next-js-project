@@ -39,6 +39,7 @@ setItemToShow(preItems => preItems + 10)
   }
   return (
     <div>
+
       {loading && !data.length && (
         <div className="flex h-screen items-center justify-center">
         <div className="loading "></div>
