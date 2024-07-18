@@ -12,6 +12,7 @@ import Loading from "@/components/Loading";
 import DataFetchLoading from "@/components/DataFetchLoading";
 import DataFetchingTwo from "@/components/DataFetchingTwo";
 import ScrollToTop from "@/components/ScrollToTop";
+import DarkLightMode from "@/components/DarkLightMode";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
   {/* <DataFetchLoading/> */}
   {/* <DataFetchingTwo/> */}
   {/* <ScrollToTop/> */}
+  <DarkLightMode/>
 </main>
   );
 }
