@@ -1,7 +1,20 @@
-import React from 'react';
+"use client"; // Assuming you are using Next.js with client components
+
+import React, { useEffect, useState } from 'react';
 import CardComponent from './CardComponent';
 
 const CardSection = () => {
+    const [loading, setLoading] = useState(true);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setLoading(false); 
+        }, 300);
+        return () => clearTimeout(timer);
+    }, []);
+
+    if (loading) {
+        return <div>loading</div>;
+    }
 
     const featuresData = [
         {
@@ -19,18 +32,19 @@ const CardSection = () => {
             ],
         }
     ];
+
     return (
         <div>
-        {featuresData?.map((item, index) => (
-            <div key={index}>
-                {item?.items?.map((feature, id) => (
-                    <div key={id}>
-                        <CardComponent title={feature.name} check={feature?.action} />
-                    </div>
-                ))}
-            </div>
-        ))}
-    </div>
+            {featuresData.map((item, index) => (
+                <div key={index}>
+                    {item.items.map((feature, id) => (
+                        <div key={id}>
+                            <CardComponent title={feature.name} check={feature.action} />
+                        </div>
+                    ))}
+                </div>
+            ))}
+        </div>
     );
 };
 
