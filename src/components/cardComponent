@@ -1,0 +1,15 @@
+import { FaRegCircleCheck } from "react-icons/fa6";
+import { FaRegSquareCheck } from "react-icons/fa6";
+
+const CardComponent = ({ title, check }) => {
+    return (
+        <div className='flex flex-col '>
+            <div className='flex items-center gap-5'>
+                {check ? <FaRegCircleCheck /> : <FaRegSquareCheck />}
+                <h1>{title}</h1>
+            </div>
+        </div>
+    );
+};
+
+export default CardComponent;
