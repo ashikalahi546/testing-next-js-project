@@ -1,0 +1,17 @@
+import React from 'react';
+
+const BackgroundShape = () => {
+  return (
+    <div className="w-full h-10  flex">
+      <div className="flex-1 h-full bg-[#ff005b] "></div>
+      <div className="flex-1 h-full bg-[#17274c] relative">
+        <div className="absolute left-0 h-full border-l-[30px]
+         border-l-[#ff005b] border-t-[40px] border-t-transparent box-border"></div>
+        
+      </div>
+    </div>
+
+  );
+};
+
+export default BackgroundShape;
