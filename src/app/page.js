@@ -31,6 +31,7 @@ export default function Home() {
   {/* <DataFetchingTwo/> */}
   {/* <ScrollToTop/> */}
   <DarkLightMode/>
+     <PrimaryButton iconColorChange={`networkIconColorChange`}/>
 </main>
   );
 }
