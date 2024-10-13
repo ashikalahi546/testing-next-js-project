@@ -1,0 +1,14 @@
+import { NetworkIcon } from '../Icons';
+const PrimaryButton = ({iconColorChange}) => {
+    return (
+        <div  className='bg-blue-600 primary hover:bg-red-500 px-14 py-2 rounded-md'>
+            <button>
+             <div className={`${iconColorChange}`}>
+                <NetworkIcon/>
+             </div>
+            </button>
+        </div>
+    );
+};
+
+export default PrimaryButton;
