@@ -1,13 +1,19 @@
 import { FaRegCircleCheck } from "react-icons/fa6";
 import { FaRegSquareCheck } from "react-icons/fa6";
 
-const CardComponent = ({ title, check }) => {
+const CardComponent = ({ title, check, button, speed, dataLimit, items }) => {
     return (
-        <div className='flex flex-col '>
-            <div className='flex items-center gap-5'>
-                {check ? <FaRegCircleCheck /> : <FaRegSquareCheck />}
-                <h1>{title}</h1>
-            </div>
+        <div className='flex flex-col gap-5 '>
+            <h2>{speed}</h2>
+            <h1>{dataLimit}</h1>
+            {items?.map((item, index) => (
+                <div key={index} className='flex items-center gap-5 mb-5'>
+                    {check ? <FaRegCircleCheck /> : <FaRegSquareCheck />}
+                    <h1>{item?.name}</h1>
+                </div>
+            ))}
+
+
         </div>
     );
 };
