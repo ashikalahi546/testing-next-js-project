@@ -1,12 +1,15 @@
 import { NetworkIcon } from '../Icons';
-const PrimaryButton = ({iconColorChange}) => {
+const PrimaryButton = ({ iconColorChange, icon = false,primary,text }) => {
     return (
-        <div  className='bg-blue-600 primary hover:bg-red-500 px-14 py-2 rounded-md'>
+        <div className={`border ${primary} hover:text-white flex items-center gap-5 hover:bg-red-500 px-14 py-2 rounded-md`}>
             <button>
-             <div className={`${iconColorChange}`}>
-                <NetworkIcon/>
-             </div>
+             {text}
             </button>
+            {
+                    icon && <div className={`${iconColorChange}`}>
+                        <NetworkIcon />
+                    </div>
+                }
         </div>
     );
 };
