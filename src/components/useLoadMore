@@ -1,0 +1,23 @@
+"use client"
+import { useEffect, useState } from "react";
+
+const useLoadMore = ({ data =[] , newItems = 4, initialItems = 4 }) => {
+    const [items, setItems] = useState([]);
+    const [itemsToShow, setItemsToShow] = useState(initialItems);
+
+    useEffect(() => {
+        setItems(data.slice(0, itemsToShow));
+    }, [data, itemsToShow]);
+
+    const loadMore = () => {
+        console.log("Load More Clicked");
+      if(items.length < data.length){
+        setItemsToShow((prev) => prev + newItems);
+   
+      }
+    };
+
+    return { items, loadMore };
+};
+
+export default useLoadMore;
