@@ -2,14 +2,24 @@ import React from 'react';
 
 const BackgroundShape = () => {
   return (
-    <div className="w-full h-10  flex">
-      <div className="flex-1 h-full bg-[#ff005b] "></div>
-      <div className="flex-1 h-full bg-[#17274c] relative">
-        <div className="absolute left-0 h-full border-l-[30px]
-         border-l-[#ff005b] border-t-[40px] border-t-transparent box-border"></div>
-        
-      </div>
+
+<div className="w-full flex justify-center relative">
+  <div className="w-full h-7 flex">
+    <div className="w-1/2 bg-red-700 "></div>
+    <div className="w-1/2 bg-black"></div>
+  </div>
+  
+  <div className='border-l-[28px] border-l-red-700 absolute border-b-[28px] border-b-black box-border'></div>
+  <div className="absolute flex w-full max-w-[1220px] h-7">
+    <div className="w-6/12 flex items-center">
+      <h1 className="text-white font-bold">Left Content</h1>
     </div>
+    <div className="w-6/12 flex items-center justify-end">
+      <h1 className="text-white font-bold">Right Content</h1>
+    </div>
+  </div>
+</div>
+
 
   );
 };
